@@ -1,0 +1,75 @@
+<div class="layout-wrap">
+    <nav class="navbar navbar-expand-lg navbar-expand-md">
+      <a class="navbar-brand">
+        <img class="app-menu" src="../../assets/menu-icon.svg" alt="..." (click)="lnToggleOnClick()">
+      </a>
+      <a class="navbar-brand logo-text" href="#">
+        <span class="profile-icon">
+            {{ logoText }}
+          </span>
+      </a>
+      <div class="navbar-nav flex-end">
+        <div class="user-dropdown">
+          <li class="nav-item dropdown ms-auto">
+            <a class="nav-link dropdown-toggle" href="#" aria-haspopup="true"
+              aria-expanded="false">
+              <span class="profile-icon">
+                <div class="pi-logo">{{ userProfileLogo }}</div>
+              </span>
+              <span class="profile-label">Welcome </span>
+              <span class="profile-name">{{ userName }}</span>
+            </a>
+            <!-- <div class="dropdown-menu dropdown-menu-end profile-card" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item profile-item roles-wrap">
+                <span class="profile-key">
+                  <div class="profile-item-icon">
+                    <img src="./assets/Roles.svg" alt="...">
+                  </div>
+                  DP1 :
+                </span>
+                <span class="profile-divider"> {{ ":"}} </span>
+                <div class="profile-value">
+                    Lorem
+                </div>
+              </a>
+              <a class="dropdown-item profile-item">
+                <span class="profile-key">
+                  <div class="profile-item-icon">
+                    <img src="./assets/Environment.svg" alt="...">
+                  </div>
+                  DP2
+                </span>
+                <span class="profile-divider"> {{ ":"}} </span>
+                <div class="profile-value">
+                  Lorem
+                </div>
+              </a>
+            </div> -->
+          </li>
+        </div>
+      </div>
+    </nav>
+    <mat-drawer-container class="app-body">
+      <mat-drawer #drawerContent mode='side' opened class="ln-drawer"
+        [ngClass]="{'drawer-collapse ln-hide-icons' : sideNavcollapse, 'drawer-expand': !sideNavcollapse }"
+        (mouseenter)="mouseEnter()" (mouseleave)="mouseLeave()">
+        <div class="nav-alignment">
+          <!-- <div class="toggle-container">
+            <mat-icon *ngIf="!sideNavcollapse" class="ln-btn-toggle" (click)="lnToggleOnClick(accordion)">arrow_left
+            </mat-icon>
+            <mat-icon *ngIf="sideNavcollapse" class="ln-btn-toggle" (click)="lnToggleOnClick(accordion)">arrow_right
+            </mat-icon>
+          </div> -->
+          <mat-accordion #accordion="matAccordion" [multi]="true">
+            <app-side-nav [lnMouseEnter]="lnMouseEnter" [lnMenuMouseEnter]="lnMenuMouseEnter"></app-side-nav>
+          </mat-accordion>
+        </div>
+      </mat-drawer>
+      <mat-drawer-content id="id-ro-container"
+        [ngClass]="{'drawer-content-collapse' : sideNavcollapse, 'drawer-content-expand': !sideNavcollapse }">
+        <div class="ro-wrap">
+          <router-outlet></router-outlet>
+        </div>
+      </mat-drawer-content>
+    </mat-drawer-container>
+  </div>
