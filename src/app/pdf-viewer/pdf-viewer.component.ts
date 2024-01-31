@@ -1,9 +1,10 @@
 import { Component, ElementRef, OnInit, ViewEncapsulation } from '@angular/core';
 import { MatDialog, MatDialogConfig, MatDialogRef } from '@angular/material/dialog';
 import license from './license-key';
-import * as UIExtension from '../../foxit-lib/UIExtension.full.js';
-import * as Addons from '../../foxit-lib/uix-addons/allInOne.js';
-// import * as Addons from '../../../merged-foxit-addons.js';
+import * as UIExtension from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/UIExtension.full.js';
+import * as Addons from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/allInOne.js';
+// import * as UIExtension from '../../foxit-lib/UIExtension.full.js';
+// import * as Addons from '../../foxit-lib/uix-addons/allInOne.js';
 
 @Component({
   selector: 'app-foxitpdfviewer',
@@ -52,18 +53,17 @@ export class PdfViewerComponent implements OnInit {
           ...license,
         }
       },
-      // appearance: UIExtension.appearances.adaptive,
+      
       appearance: CustomAppearance,
-      // renderTo: this.element.nativeElement,
       renderTo: '#pdf-ui',
-      // addons: [
-      //   '/foxit-lib/uix-addons/file-property/addon.info.json',
-      //   '/foxit-lib/uix-addons/full-screen/addon.info.json',
-      // ],
+      addons: Addons,
+      // appearance: UIExtension.appearances.adaptive,
+      // renderTo: this.element.nativeElement,
     });
+
     this.pdfui.openPDFByHttpRangeRequest({
       range: {
-        url: '../../../assets/Test_pdf.pdf',
+        url: '../../../assets/Test-files-and-images/TestPDF.pdf',
       }
     })
   }

@@ -32,11 +32,15 @@
                 "glob": "**/*",
                 "input": "node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/lib",
                 "output": "/foxit-lib",
-                "ignore": ["PDFViewCtrl.js", "PDFViewCtrl.{vendor,polyfills}.js", "UIExtension.*"]
-             }
+                "ignore": [
+                  "PDFViewCtrl.js",
+                  "PDFViewCtrl.{vendor,polyfills}.js",
+                  "UIExtension.*"
+                ]
+              }
             ],
             "styles": [
-              "src/foxit-lib/UIExtension.css",
+              "node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/UIExtension.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],

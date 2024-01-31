@@ -19,6 +19,7 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
+    "@foxitsoftware/foxit-pdf-sdk-for-web-library": "^9.2.1",
     "bootstrap": "^5.2.3",
     "i18next": "^23.7.18",
     "jquery": "^3.7.0",
