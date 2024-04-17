@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { PdfViewerDialogComponent } from '../pdf-viewer-dialog/pdf-viewer-dialog.component';
+
 // import { PdfViewerComponent } from './pdf-viewer/pdf-viewer.component';
 
 @Component({
@@ -27,11 +29,11 @@ export class SideNavComponent implements OnInit {
     dialogConfig.data = {
       isData : true
     }
-    // let pdfDialogRef = this.dialog.open(PdfViewerComponent, dialogConfig)
-    // pdfDialogRef.afterClosed().subscribe(result => {
-    //   if (result) {
-    //   }
-    // });
+    let pdfDialogRef = this.dialog.open(PdfViewerDialogComponent, dialogConfig)
+    pdfDialogRef.afterClosed().subscribe(result => {
+      if (result) {
+      }
+    });
   }
 
 }

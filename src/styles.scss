@@ -84,3 +84,16 @@ h4 {
         overflow: hidden !important;
     }
 }
+.setbased-ad-dialog {
+    height: 90vh !important;
+    width: 80vw !important;
+    max-width: 80vw !important;
+
+    .mat-dialog-container {
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
+}
+
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

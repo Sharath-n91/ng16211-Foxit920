@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
 import { PdfViewerComponent } from './pdf-viewer/pdf-viewer.component';
 import { HomeComponent } from './home/home.component';
+import { PdfViewerFdDefaultComponent } from './pdf-viewer-fd-default/pdf-viewer-fd-default.component';
+// import { PdfViewerUpdatesComponent } from './pdf-viewer-updates/pdf-viewer-updates.component';
 
 
 const routes: Routes = [
@@ -17,6 +19,14 @@ const routes: Routes = [
       {
         path: 'pdfViewer',
         component: PdfViewerComponent
+      },
+      // {
+      //   path: 'pdfViewerUpdates',
+      //   component: PdfViewerUpdatesComponent
+      // },
+      {
+        path: 'pdfViewerFdDefault',
+        component: PdfViewerFdDefaultComponent
       }
     ]
   },

@@ -13,8 +13,9 @@
       </div>
     </a>
   
-    <a class="menu-link" routerLink="pdfViewer">
+    <!-- <a class="menu-link" routerLink="pdfViewer"> -->
     <!-- <a class="menu-link" routerLink="" (click)="openPDFDialog()"> -->
+    <a class="menu-link" routerLink="pdfViewer">
       <div class="collapse-icon" *ngIf="!lnMenuMouseEnter">
         <img src="./assets/Client_View.svg" alt="...">
       </div>
@@ -25,4 +26,51 @@
         </div>
       </div>
     </a>
+    <a class="menu-link" routerLink="pdfViewerUpdates">
+      <div class="collapse-icon" *ngIf="!lnMenuMouseEnter">
+        <img src="./assets/Client_View.svg" alt="...">
+      </div>
+      <div class="menu-content" *ngIf="lnMenuMouseEnter">
+        <div class="menu-content-items" routerLink="pdfViewerUpdates">
+          <img src="./assets/Client_View.svg" alt="...">
+          <span class="ln-menu-text">PDF Viewer Updates</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- <a class="menu-link" routerLink="pdfViewerFoxitDemo">
+        <div class="collapse-icon" *ngIf="!lnMenuMouseEnter">
+          <img src="./assets/Client_View.svg" alt="...">
+        </div>
+        <div class="menu-content" *ngIf="lnMenuMouseEnter">
+          <div class="menu-content-items" routerLink="pdfViewerFoxitDemo">
+            <img src="./assets/Client_View.svg" alt="...">
+            <span class="ln-menu-text">PDF Viewer Foxit Demo</span>
+          </div>
+        </div>
+      </a> -->
+      
+    <a class="menu-link" routerLink="pdfViewerFdDefault">
+        <div class="collapse-icon" *ngIf="!lnMenuMouseEnter">
+          <img src="./assets/Client_View.svg" alt="...">
+        </div>
+        <div class="menu-content" *ngIf="lnMenuMouseEnter">
+          <div class="menu-content-items" routerLink="pdfViewerFdDefault">
+            <img src="./assets/Client_View.svg" alt="...">
+            <span class="ln-menu-text">PDF Viewer FD default</span>
+          </div>
+        </div>
+      </a>
+    <a class="menu-link" routerLink="">
+        <div class="collapse-icon" *ngIf="!lnMenuMouseEnter">
+          <img src="./assets/Client_View.svg" alt="...">
+        </div>
+        <div class="menu-content" *ngIf="lnMenuMouseEnter">
+          <div class="menu-content-items" routerLink="" (click)="openPDFDialog()">
+            <img src="./assets/Client_View.svg" alt="...">
+            <span class="ln-menu-text">PDF Viewer FD Dialog default</span>
+          </div>
+        </div>
+      </a>
+      
   </div>
